@@ -1,0 +1,24 @@
+{
+  "name": "fastaov",
+  "version": "0.0.1",
+  "description": "Stream overlays management tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fgib/FastaOV.git"
+  },
+  "author": "YLOD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fgib/FastaOV/issues"
+  },
+  "homepage": "https://github.com/Fgib/FastaOV#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}
