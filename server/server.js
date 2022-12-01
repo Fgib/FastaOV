@@ -74,19 +74,32 @@ module.exports.start = function () {
     }, () => {
         console.log('FastaOV listening on port %s', server.address().port);
 
-        app.get('/', (req, res) => { res.redirect('/dashboard/'); });
+        app.use(express.static(path.join(__dirname, '../public')));
+        app.get('/', (req, res) => { res.redirect('/graphics/'); });
 
-        app.get('/dashboard/', (req, res) => {
+        app.get('/dashboardp1/', (req, res) => {
             if (!req.url.endsWith('/')) {
                 return res.redirect('/dashboard/');
             }
-            res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+            res.sendFile(path.join(__dirname, '../public/dashboard/p1.html'));
         });
+
+        app.get('/dashboardp2/', (req, res) => {
+            if (!req.url.endsWith('/')) {
+                return res.redirect('/dashboard/');
+            }
+            res.sendFile(path.join(__dirname, '../public/dashboard/p2.html'));
+        });
+
         app.get('/graphics/', (req, res) => {
             if (!req.url.endsWith('/')) {
                 return res.redirect('/graphics/');
             }
-            res.sendFile(path.join(__dirname, '../public/graphics.html'));
+            res.sendFile(path.join(__dirname, '../public/dashboard/graphics.html'));
+        });
+
+        app.get('/*/', (req, res) => {
+            res.status(404).send('404 Not found Hehehe Boy');
         });
     })
 };
