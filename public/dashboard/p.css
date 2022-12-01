@@ -51,6 +51,7 @@ body {
 }
 
 .mapName {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,4 +63,31 @@ body {
     width: 100%;
     background-color: black;
     color: white;
+    z-index: -1;
+}
+
+.selectedP1 {
+    box-shadow:
+        0 0 20px #135dfe,
+        0 0 16px #135dfe,
+        0 0 4px #135dfe,
+        inset 0 0 20px #135dfe,
+        inset 0 0 16px #135dfe;
+}
+
+.selectedP1 .mapName {
+    background-color: #135dfe !important;
+}
+
+.selectedP2 {
+    box-shadow:
+        0 0 20px #fe1313,
+        0 0 16px #fe1313,
+        0 0 4px #fe1313,
+        inset 0 0 20px #fe1313,
+        inset 0 0 16px #fe1313;
+}
+
+.selectedP2 .mapName {
+    background-color: #fe1313 !important;
 }

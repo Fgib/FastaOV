@@ -37,9 +37,18 @@ module.exports.start = function () {
             console.log("Socket disconnected: ID %s with IP %s", socket.id, socket.handshake.address.address);
         });
 
-        socket.on('chat_message', function (data) {
-            console.log("Message received: %s", data);
-            io.emit('chat_message', data);
+        // socket.on('chat_message', function (data) {
+        //     console.log("Message received: %s", data);
+        //     io.emit('chat_message', data);
+        // });
+
+        socket.on('p1_select', function (data) {
+            console.log("Map selected by P1: %s", data);
+            io.emit('map_selected', "P1:" + data);
+        });
+        socket.on('p2_select', function (data) {
+            console.log("Map selected by P2: %s", data);
+            io.emit('map_selected', "P2:" + data);
         });
 
 

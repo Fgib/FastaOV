@@ -4,19 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/dashboard/p2.css">
+    <link rel="stylesheet" href="/dashboard/p.css">
+    <link rel="stylesheet" href="/dashboard/fonts.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
-    <h1>Player 2 PICK-BAN Dashboard</h1>
-    <p id="pageId">Here is the dashboard</p>
-    <ul id="messages"></ul>
-    <form id="form" action="">
-        <input id="input" autocomplete="off"></input>
-        <button id="button">Send</button>
-    </form>
+    <div class="pageTitle">Player 2 PICK-BAN Dashboard</div>
+
+    <div class="center">
+        <div class="mapList">
+            <div id="BF" class="mapCard" data-map="BF">
+                <span class="mapImg" style="background-image: url('/assets/stage_img1.jpg');"></span>
+                <span class="mapName">Battlefield</span>
+            </div>
+            <div id="FD" class="mapCard" data-map="FD">
+                <span class="mapImg" style="background-image: url('/assets/stage_img3.jpg');"></span>
+                <span class="mapName">Final Destination</span>
+            </div>
+            <div id="SBF" class="mapCard" data-map="SBF">
+                <span class="mapImg" style="background-image: url('/assets/stage_img104.jpg');"></span>
+                <span class="mapName">Small Battlefield</span>
+            </div>
+            <div id="SV" class="mapCard" data-map="SV">
+                <span class="mapImg" style="background-image: url('/assets/stage_img44.jpg');"></span>
+                <span class="mapName">SmashVille</span>
+            </div>
+            <div id="KL" class="mapCard" data-map="KL">
+                <span class="mapImg" style="background-image: url('/assets/stage_img79.jpg');"></span>
+                <span class="mapName">Kalos league</span>
+            </div>
+            <div id="TC" class="mapCard" data-map="TC">
+                <span class="mapImg" style="background-image: url('/assets/stage_img85.jpg');"></span>
+                <span class="mapName">Town & City</span>
+            </div>
+            <div id="HB" class="mapCard" data-map="HB">
+                <span class="mapImg" style="background-image: url('/assets/stage_img11.jpg');"></span>
+                <span class="mapName">Hollow Bastion</span>
+            </div>
+            <div id="YS" class="mapCard" data-map="YS">
+                <span class="mapImg" style="background-image: url('/assets/stage_img19.jpg');"></span>
+                <span class="mapName">Yoshi’s Story</span>
+            </div>
+            <div id="PS2" class="mapCard" data-map="PS2">
+                <span class="mapImg" style="background-image: url('/assets/stage_img40.jpg');"></span>
+                <span class="mapName">Pokemon Stadium 2</span>
+            </div>
+        </div>
+    </div>
 </body>
+
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
