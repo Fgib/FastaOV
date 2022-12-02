@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css">
+    <link rel="stylesheet" href="/dashboard/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <div class="pageTitle">PICK-BAN Dashboard</div>
+
+    <div class="center">
+        <div class="mapList">
+            <div id="BF" class="mapCard" data-map="BF">
+                <span class="mapName">Battlefield</span>
+            </div>
+            <div id="FD" class="mapCard" data-map="FD">
+                <span class="mapName">Final Destination</span>
+            </div>
+            <div id="SBF" class="mapCard" data-map="SBF">
+                <span class="mapName">Small Battlefield</span>
+            </div>
+            <div id="SV" class="mapCard" data-map="SV">
+                <span class="mapName">SmashVille</span>
+            </div>
+            <div id="KL" class="mapCard" data-map="KL">
+                <span class="mapName">Kalos league</span>
+            </div>
+            <div id="TC" class="mapCard" data-map="TC">
+                <span class="mapName">Town & City</span>
+            </div>
+            <div id="HB" class="mapCard" data-map="HB">
+                <span class="mapName">Hollow Bastion</span>
+            </div>
+            <div id="YS" class="mapCard" data-map="YS">
+                <span class="mapName">Yoshi’s Story</span>
+            </div>
+            <div id="PS2" class="mapCard" data-map="PS2">
+                <span class="mapName">Pokemon Stadium 2</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="center">
+        <button>Reset</button>
+        <button>Reload</button>
+        <button>Alert</button>
+    </div>
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+</script>
+<script type="text/javascript" src="/dashboard/dashboard.js" anonymous"></script>
+</html>

@@ -37,11 +37,6 @@ module.exports.start = function () {
             console.log("Socket disconnected: ID %s with IP %s", socket.id, socket.handshake.address.address);
         });
 
-        // socket.on('chat_message', function (data) {
-        //     console.log("Message received: %s", data);
-        //     io.emit('chat_message', data);
-        // });
-
         socket.on('p1_select', function (data) {
             console.log("Map selected by P1: %s", data);
             io.emit('map_selected', "P1:" + data);
@@ -86,16 +81,16 @@ module.exports.start = function () {
         app.use(express.static(path.join(__dirname, '../public')));
         app.get('/', (req, res) => { res.redirect('/graphics/'); });
 
-        app.get('/dashboardp1/', (req, res) => {
+        app.get('/p1/', (req, res) => {
             if (!req.url.endsWith('/')) {
-                return res.redirect('/dashboard/');
+                return res.redirect('/p1/');
             }
             res.sendFile(path.join(__dirname, '../public/dashboard/p1.html'));
         });
 
-        app.get('/dashboardp2/', (req, res) => {
+        app.get('/p2/', (req, res) => {
             if (!req.url.endsWith('/')) {
-                return res.redirect('/dashboard/');
+                return res.redirect('/p2/');
             }
             res.sendFile(path.join(__dirname, '../public/dashboard/p2.html'));
         });
@@ -105,6 +100,13 @@ module.exports.start = function () {
                 return res.redirect('/graphics/');
             }
             res.sendFile(path.join(__dirname, '../public/dashboard/graphics.html'));
+        });
+
+        app.get('/dashboard/', (req, res) => {
+            if (!req.url.endsWith('/')) {
+                return res.redirect('/dashboard/');
+            }
+            res.sendFile(path.join(__dirname, '../public/dashboard/dashboard.html'));
         });
 
         app.get('/*/', (req, res) => {

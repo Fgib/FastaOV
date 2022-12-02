@@ -1,0 +1,45 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    max-width: 680px;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageTitle {
+    font-family: 'Montserrat';
+    font-size: 36px;
+    font-weight: 700;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapList {
+    width: 100%;
+    min-width: 480px;
+    max-width: 680px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mapCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    flex-basis: 30%;
+    border: 1px solid black;
+    border-radius: 20px;
+    aspect-ratio: 16/10;
+}
